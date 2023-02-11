@@ -1,0 +1,16 @@
+@use "./styles/global.scss" as *;
+@use "./styles/partials/colors" as *;
+@use "./styles/partials/mixins" as *;
+@use "./styles/partials/fonts" as *;
+@use "./styles/partials/variables" as *;
+
+.app{
+    &__container{
+        width: 100%;
+        display: flex;        
+        background-color: $bg-page;        
+        @include desktop {
+            padding: 0 2rem;
+        }        
+    }   
+}

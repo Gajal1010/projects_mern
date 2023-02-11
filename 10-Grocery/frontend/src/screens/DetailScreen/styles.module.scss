@@ -1,0 +1,136 @@
+.details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2.25rem;
+  margin-right: 2.25rem;
+  margin-top: 4rem;
+}
+
+@media (min-width: 768px) {
+  .details {
+    margin-left: 2.25rem;
+    margin-right: 2.25rem;
+  }
+}
+
+.productContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.productPrice {
+    display: block;
+    margin-bottom: 3px;
+    color: #180C20;
+    font-size: 18px;
+    font-weight: 650;
+    line-height: 1.5rem;
+}
+.productPicture {
+  width: 100%;
+  margin: 1.5rem 0;
+}
+@media (min-width: 768px) {
+  .productPicture {
+    width: 40%;
+    padding-left: 4rem;
+    max-width: 27rem;
+    margin-left: auto;
+  }
+}
+
+.imgContain {
+  max-height: 300px;
+  width: 100%;
+  object-fit: contain;
+}
+
+  .productDetail {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+@media (min-width: 768px) {
+  .productDetail {
+    width: 40%;
+    padding-left: 4rem;
+    max-width: 27rem;
+    margin-left: auto;
+  }
+}
+
+.productPrice {
+    display: block;
+    margin-bottom: 3px;
+    color: #180C20;
+    font-size: 18px;
+    font-weight: 650;
+    line-height: 1.5rem;
+}
+
+.productButton {
+    color: #FFF;
+    background-color: #43B02A;
+    flex: 1;
+    height: 36px;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 24px;    
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+  }
+.productButtonFlex100 {
+    color: #FFF;
+    background-color: #43B02A;
+    flex: 1;
+    height: 36px;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 24px;    
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+.productButtonsAbsolute {
+    color: #FFF;
+    background-color: #43B02A;
+    display: flex;
+    height: 36px;
+    font-weight: 700;
+    font-size: 16px;    
+    border-radius: 24px;    
+    cursor: pointer;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    position: absolute;
+    transition: all 0.3s ease;
+  }
+  
+  .buttonPlus {
+    height: 36px;
+    width: 32px;
+    border-radius: 24px;    
+    cursor: pointer;
+    flex: .3;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: #43B02A;
+    color: rgb(255, 255, 255);
+    padding: 0px;
+    border-width: 0px;
+    border-style: solid;
+    border-image: initial;
+    transition: color 0.15s ease-in 0s, background-color, border-color;
+}
+
+.textQty {
+    flex: .4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.productDesc {
+    display: block;
+    color: #5c5362;
+  }

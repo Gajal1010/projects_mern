@@ -1,0 +1,19 @@
+h1 {
+    padding: 15px 0 0 0;
+}
+
+.authpage-button {
+    font-size: 1em;
+    padding: 6px 25px;
+    border-radius: 15px;
+    background-color: rgba(23, 69, 80, 0.671);
+    border: 1px solid rgb(45, 76, 138);
+    margin: 10px;
+    width: 15vh;
+}
+
+.authpage-button:hover {
+    box-shadow: 0 8px 5px -5px rgb(74, 113, 192);
+    transform: translateY(-3px);
+    transition: 0.1s;
+}

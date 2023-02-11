@@ -1,0 +1,136 @@
+.catalogListItem {
+    display: flex;
+    height: 300px;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.08);
+    transition: box-shadow .25s ease;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 8px;
+    margin-right: 16px;
+    width: 100%;
+    max-height: 400px;
+    max-width: 176px;
+    flex-direction: column;
+}
+.catalogListItem:hover {
+        box-shadow: 0 0 6px rgba(33,33,33,.2); 
+}
+.swiperContainer {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+
+.productImg {
+    height: 122px;
+    width: 122px;
+    margin-bottom: 15px;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+.productPrice {
+    display: block;
+    margin-bottom: 3px;
+    color: #180C20;
+    font-size: 18px;
+    font-weight: 650;
+    line-height: 1.5rem;
+}
+
+.productButton {
+    color: #FFF;
+    background-color: #43B02A;
+    flex: 1;
+    height: 36px;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 24px;    
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+  }
+.productButtonFlex100 {
+    color: #FFF;
+    background-color: #43B02A;
+    flex: 1;
+    height: 36px;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 24px;    
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+.productButtonsAbsolute {
+    color: #FFF;
+    background-color: #43B02A;
+    display: flex;
+    height: 36px;
+    font-weight: 700;
+    font-size: 16px;    
+    border-radius: 24px;    
+    cursor: pointer;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    position: absolute;
+    transition: all 0.3s ease;
+  }
+  
+  .buttonPlus {
+    height: 36px;
+    width: 32px;
+    border-radius: 24px;    
+    cursor: pointer;
+    flex: .3;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: #43B02A;
+    color: rgb(255, 255, 255);
+    padding: 0px;
+    border-width: 0px;
+    border-style: solid;
+    border-image: initial;
+    transition: color 0.15s ease-in 0s, background-color, border-color;
+}
+
+.textQty {
+    flex: .4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.productTitle {
+    display: block;
+    margin-bottom: 8px;
+}
+.productDesc {
+    display: block;
+    color: #5c5362;
+  }
+
+.productButtonArea {
+    margin-top: 8px;
+    display: flex;
+
+}
+
+.flexOrder {
+    flex: 1 1 176px;
+    order: 0;   
+}
+.flex100 {
+    flex: 1;
+}
+
+.fadeIn {
+    -webkit-animation: a .6s ease-in-out;
+    animation: a .6s ease-in-out;
+}
+
+.gray600 {
+    color: #5c5362;
+}

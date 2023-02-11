@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4d8a55ae.chunk.css",
+    "main.js": "/static/js/main.f8188f8f.chunk.js",
+    "main.js.map": "/static/js/main.f8188f8f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.86f99894.js",
+    "runtime-main.js.map": "/static/js/runtime-main.86f99894.js.map",
+    "static/js/2.315873cf.chunk.js": "/static/js/2.315873cf.chunk.js",
+    "static/js/2.315873cf.chunk.js.map": "/static/js/2.315873cf.chunk.js.map",
+    "static/js/3.684fd033.chunk.js": "/static/js/3.684fd033.chunk.js",
+    "static/js/3.684fd033.chunk.js.map": "/static/js/3.684fd033.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.4d8a55ae.chunk.css.map": "/static/css/main.4d8a55ae.chunk.css.map",
+    "static/js/2.315873cf.chunk.js.LICENSE.txt": "/static/js/2.315873cf.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/marble.e120765f.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.86f99894.js",
+    "static/js/2.315873cf.chunk.js",
+    "static/css/main.4d8a55ae.chunk.css",
+    "static/js/main.f8188f8f.chunk.js"
+  ]
+}

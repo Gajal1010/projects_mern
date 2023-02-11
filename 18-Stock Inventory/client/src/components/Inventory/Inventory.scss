@@ -1,0 +1,361 @@
+@use "../../styles/global.scss" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+
+.inventory {
+  border-top: solid 1px $divider;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  &:hover {
+    background-color: $bg-page;
+  }
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  &__container {
+    background-color: white;
+    margin: -5rem 1rem 2rem;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    @include tablet {
+      margin: -5.5rem 2rem 3rem;
+    }
+    @include desktop {
+      max-width: $desktop-breakpoint;
+      margin: -5.5rem auto 3rem;
+    }
+  }
+  &__top {
+    padding: 1.5rem;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__title {
+    padding-bottom: 1rem;
+    @include tablet {
+      padding-bottom: 0;
+    }
+  }
+  &__topright {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      width: 60%;
+      justify-content: flex-end;
+    }
+  }
+  &__search {
+    background-image: url("../../assets/Icons/search-24px.svg");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-position-y: center;
+    padding-left: 1rem;
+    border: solid 1px $divider;
+    border-radius: 1.25rem;
+    height: 2.25rem;
+    margin-bottom: 1rem;
+    &:focus {
+      outline: 1px solid $interactive-elements;
+    }
+    &::placeholder {
+      @include body-medium-mobile;
+      color: $table-colum-ph;
+      @include tablet {
+        @include body-medium-tablet;
+      }
+    }
+    @include tablet {
+      height: 2.375rem;
+      margin-bottom: 0;
+      margin-right: 1rem;
+      width: 60%;
+    }
+    @include desktop {
+      height: 2.375rem;
+      margin-bottom: 0;
+      margin-right: 1rem;
+      // width: 25rem;
+    }
+  }
+  &__button {
+    @include body-medium-mobile;
+    color: white;
+    border-radius: 1.25rem;
+    height: 2.25rem;
+    background-color: $interactive-elements;
+    border: none;
+    padding: 0.5rem;
+    text-align: center;
+    @include tablet {
+      padding: 0.5 1rem;
+      height: 2.375rem;
+      @include body-medium-tablet;
+    }
+    &:hover {
+      background-color: $bg-hover-header;
+    }
+  }
+  &__categories {
+    display: none;
+    @include tablet {
+      background-color: $bg-page;
+      height: 2.5rem;
+      padding: 0 1.5rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  &__categoryAndArrow {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 16%;
+    &--left {
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 20%;
+    }
+  }
+  &__category {
+    @include h4-tablet;
+    color: $table-colum-ph;
+    &--right {
+      text-align: right;
+      @include h4-tablet;
+      width: 16%;
+      color: $table-colum-ph;
+      // @include desktop {
+      //     width: 10%;
+      // }
+    }
+  }
+  &__sortArrow {
+    padding-left: 0.25rem;
+    height: 1rem;
+  }
+  &__text {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      width: 84%;
+    }
+    // @include desktop{
+    //     width: 90%;
+    // }
+  }
+  &__left {
+    width: 50%;
+    padding-right: 2rem;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      width: 42.8%;
+      padding-right: 0;
+    }
+  }
+  &__right {
+    width: 50%;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      width: 57.2%;
+    }
+  }
+  &__link {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    &::before {
+      padding-bottom: 0.25rem;
+      @include h4-mobile;
+      color: $table-colum-ph;
+      content: "INVENTORY ITEM";
+      @include tablet {
+        display: none;
+      }
+    }
+    @include tablet {
+      width: 55.6%;
+      justify-content: center;
+      padding-bottom: 0;
+    }
+  }
+  &__nameAndArrow {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    &:hover .inventory__rightArrow {
+      transform: translate(4px);
+    }
+  }
+  &__name {
+    @include body-medium-mobile;
+    font-weight: 600;
+    color: $interactive-elements;
+    &:hover {
+      text-decoration: underline;
+    }
+    @include tablet {
+      @include body-medium-tablet;
+      font-weight: 600;
+    }
+  }
+  &__rightArrow {
+    height: 1.25rem;
+    transition: transform 200ms;
+  }
+  &__address {
+    @include body-medium-mobile;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    &::before {
+      padding-bottom: 0.25rem;
+      @include h4-mobile;
+      color: $table-colum-ph;
+      content: "CATEGORY";
+      @include tablet {
+        display: none;
+      }
+    }
+    @include tablet {
+      width: 44.4%;
+      justify-content: center;
+      padding-bottom: 0;
+      padding-right: 1rem;
+      @include body-medium-tablet;
+    }
+  }
+  &__contact {
+    @include h4-mobile;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    &::before {
+      padding-bottom: 0.25rem;
+      @include h4-mobile;
+      color: $table-colum-ph;
+      content: "STATUS";
+      @include tablet {
+        display: none;
+      }
+    }
+    @include tablet {
+      width: 33.3%;
+      flex-direction: row;
+      align-content: center;
+      padding-bottom: 0;
+    }
+  }
+  &__statusTagGreen {
+    text-transform: uppercase;
+    width: fit-content;
+    color: $in-stock;
+    background-color: rgba(21, 132, 99, 0.07);
+    padding: 0 0.5rem;
+    border-radius: 1.25rem;
+    display: flex;
+    align-items: center;
+    @include tablet {
+      @include h4-tablet;
+    }
+  }
+  &__statusTagRed {
+    text-transform: uppercase;
+    width: fit-content;
+    color: $out-stock-error;
+    background-color: rgba(201, 69, 21, 0.07);
+    padding: 0 0.5rem;
+    border-radius: 1.25rem;
+    display: flex;
+    align-items: center;
+    @include tablet {
+      @include h4-tablet;
+    }
+  }
+  &__contactinfo {
+    @include body-medium-mobile;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    &::before {
+      padding-bottom: 0.25rem;
+      @include h4-mobile;
+      color: $table-colum-ph;
+      content: "QTY";
+      @include tablet {
+        display: none;
+      }
+    }
+    @include tablet {
+      width: 33.3%;
+      justify-content: center;
+      padding-bottom: 0;
+      @include body-medium-tablet;
+    }
+  }
+  &__warehouseName {
+    @include body-medium-mobile;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    &::before {
+      padding-bottom: 0.25rem;
+      @include h4-mobile;
+      color: $table-colum-ph;
+      content: "WAREHOUSE";
+      @include tablet {
+        display: none;
+      }
+    }
+    @include tablet {
+      width: 33.3%;
+      justify-content: center;
+      padding-bottom: 0;
+      @include body-medium-tablet;
+    }
+  }
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+    @include tablet {
+      width: 16%;
+      height: 1.5rem;
+      justify-content: flex-end;
+    }
+    // @include desktop {
+    //     width: 10%;
+    //     height: 1.5rem;
+    //     justify-content: flex-end;
+    // }
+  }
+  &__deleteicon {
+    margin-right: 1rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__editicon {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

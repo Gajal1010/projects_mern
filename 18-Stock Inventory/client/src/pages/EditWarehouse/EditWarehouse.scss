@@ -1,0 +1,422 @@
+@use "../../styles/global.scss" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/colors" as *;
+
+.edit-warehouse {
+    height: 54rem;
+    background-color: $white-global;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    border-radius: 0.187rem;
+    margin: -4rem 1rem 2rem 1rem;
+    @include tablet {
+        height: 35rem;
+        margin: -5.8rem 2rem 2rem 2rem;
+    }
+    @include desktop {
+        height: 38.25rem;
+        margin: -5.8rem 5rem 2rem 5rem;
+    }
+    &__title-container {
+        display: flex;
+        justify-content: left;
+        border-bottom: 1px solid $divider;
+        height: 5.75rem;
+        @include tablet {
+            height: 5.81rem;
+        }
+    }
+    &__back-arrow {
+        color: $interactive-elements;
+        width: 1rem;
+        height: 1rem;
+        margin-left: 1rem;
+        margin-top: 2.75rem;
+        @include tablet {
+            margin-left: 2.25rem;
+            margin-top: 2.81rem;
+        }
+        @include desktop {
+            margin-left: 2.75rem;
+            margin-top: 2.81rem;
+        }
+    }
+    &__header-title {
+        @include h1-mobile;
+        margin: 2rem 3.5rem 1.5rem 0.5rem;
+        @include tablet {
+            @include h1-tablet;
+            width: 13.56rem;
+            height: 2.5rem;
+            margin-left: 0.75rem;
+            margin-top: 2rem;
+        }
+        @include desktop {
+            margin-left: 4.5rem;
+            margin-top: 2rem;
+        }
+    }
+    &__warehouse-container {
+        border-bottom: 1px solid $divider;
+        height: 22rem;
+        @include tablet {
+            width: 45%;
+            border-right: 1px solid $divider;
+            border-bottom: hidden!important;  
+        }
+    }
+    &__title {
+        @include h2-mobile;
+        margin: 1rem 0;
+        @include tablet {
+            @include h2-tablet;
+            margin-top: -0.5rem;
+        }
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        margin: 0 1rem;
+        @include tablet {
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-left: 2rem;
+            margin-top: 1.5rem;
+        }
+        @include desktop {
+            margin-left: 2.5rem;
+            margin-right: 2.5rem;
+        }
+    }
+    &__form--warehouse-name-label {
+        @include h3-mobile;
+        margin-top: 1.25rem;
+        margin-bottom: 0.25rem;
+        @include tablet {
+            @include h3-tablet;
+        }
+    }
+    &__form--warehouse-name {
+        width: 16rem;
+        height: 2.25rem;
+        border: 1px solid $divider;
+        border-radius: 1.25rem;
+        padding-left: 0.5rem;
+        margin-bottom: 0.5rem;
+        @include tablet {
+            width: 18rem;
+            padding-left: 0.75rem;
+            margin-right: 2rem;
+            margin-bottom: 1rem;
+        }
+        @include desktop {
+            width: 27rem;
+        }
+    }
+    &__form--warehouse-name::placeholder {
+        @include h4-mobile; 
+        @include tablet {
+            @include h4-tablet;
+        }   
+    }
+    &__form--street-label {
+        @include h3-mobile;
+        margin-top: 1rem;
+        margin-bottom: 0.25rem;
+        @include tablet {
+            @include h3-tablet;   
+        }
+    }
+    &__form--street {
+        width: 16rem;
+        height: 2.25rem;
+        border: 1px solid $divider;
+        border-radius: 1.25rem;
+        padding-left: 0.5rem;
+        margin-bottom: 0.5rem;
+        @include tablet {
+            width: 18rem;
+            padding-left: 0.75rem;
+            margin-right: 2rem;
+            margin-bottom: 1rem;
+        }
+        @include desktop {
+            width: 27rem;
+        }
+    }
+    &__form--street::placeholder {
+        @include h4-mobile;
+        @include tablet {
+            @include h4-tablet;
+        }
+    }
+    &__form--city-label {
+        @include h3-mobile;
+        margin-top: 1rem;
+        margin-bottom: 0.25rem;
+        @include tablet {
+            @include h3-tablet;
+        }
+    }
+    &__form--city {
+        width: 16rem;
+        height: 2.25rem;
+        border: 1px solid $divider;
+        border-radius: 1.25rem;
+        padding-left: 0.5rem;
+        margin-bottom: 0.5rem;
+        @include tablet {
+            width: 18rem;
+            padding-left: 0.75rem;
+            margin-right: 2rem;
+            margin-bottom: 1rem;
+        }
+        @include desktop {
+            width: 27rem;
+        }
+    }
+    &__form--city::placeholder {
+        @include h4-mobile;
+        @include tablet {
+            @include h4-tablet;
+        }
+    }
+    &__form--country-label {
+        @include h3-mobile;
+        margin-top: 1rem;
+        margin-bottom: 0.25rem;
+        @include tablet {
+            @include h3-tablet; 
+        }
+    }
+    &__form--country {
+        width: 16rem;
+        height: 2.25rem;
+        border: 1px solid $divider;
+        border-radius: 1.25rem;
+        padding-left: 0.5rem;
+        @include tablet {
+            width: 18rem;
+            padding-left: 0.75rem;
+            margin-right: 2rem;
+            margin-bottom: 1rem;
+        }
+    }
+    &__form--country::placeholder {
+        @include h4-mobile;
+        @include tablet {
+            @include h4-tablet;
+        }
+    }
+    &__contact-container {
+        height: 25.5rem;
+        @include tablet {
+            width: 50%;
+            margin-left: 2rem;
+        }
+    }
+    &__form--contact-name-label {
+        @include h3-mobile;
+        margin-top: 1.25rem;
+        margin-bottom: 0.25rem;
+        @include tablet {
+            @include h3-tablet;
+        }
+    }
+    &__form--contact-name {
+        width: 16rem;
+        height: 2.25rem;
+        border: 1px solid $divider;
+        border-radius: 1.25rem;
+        padding-left: 0.5rem;
+        margin-bottom: 0.5rem;
+        @include tablet {
+            width: 18rem;
+            padding-left: 0.75rem;
+            margin-right: 2rem;
+            margin-bottom: 1rem;
+        }
+        @include desktop {
+            width: 27rem;
+        }
+    }
+    &__form--contact-name::placeholder {
+        @include h4-mobile; 
+        @include tablet {
+            @include h4-tablet;
+        }   
+    }
+    &__form--position-label {
+        @include h3-mobile;
+        margin-top: 1rem;
+        margin-bottom: 0.25rem;
+        @include tablet {
+            @include h3-tablet;
+           
+        }
+    }
+    &__form--position {
+        width: 16rem;
+        height: 2.25rem;
+        border: 1px solid $divider;
+        border-radius: 1.25rem;
+        padding-left: 0.5rem;
+        margin-bottom: 0.5rem;
+        @include tablet {
+            width: 18rem;
+            padding-left: 0.75rem;
+            margin-right: 2rem;
+            margin-bottom: 1rem;
+        }
+        @include desktop {
+            width: 27rem;
+        }
+    }
+    &__form--position::placeholder {
+        @include h4-mobile;
+        @include tablet {
+            @include h4-tablet;
+        }
+    }
+    &__form--number-label {
+        @include h3-mobile;
+        margin-top: 1rem;
+        margin-bottom: 0.25rem;
+        @include tablet {
+            @include h3-tablet;
+        }
+    }
+    &__form--number {
+        width: 16rem;
+        height: 2.25rem;
+        border: 1px solid $divider;
+        border-radius: 1.25rem;
+        padding-left: 0.5rem;
+        margin-bottom: 0.5rem;
+        @include tablet {
+            width: 18rem;
+            padding-left: 0.75rem;
+            margin-right: 2rem;
+            margin-bottom: 1rem;
+        }
+        @include desktop {
+            width: 27rem;
+        }
+    }
+    &__form--number::placeholder {
+        @include h4-mobile;
+        @include tablet {
+            @include h4-tablet;
+        }
+    }
+    &__form--email-label {
+        @include h3-mobile;
+        margin-top: 1rem;
+        margin-bottom: 0.25rem;
+        @include tablet {
+            @include h3-tablet;
+        }
+    }
+    &__form--email {
+        width: 16rem;
+        height: 2.25rem;
+        border: 1px solid $divider;
+        border-radius: 1.25rem;
+        padding-left: 0.5rem;
+        @include tablet {
+            width: 18rem;
+            padding-left: 0.75rem;
+            margin-right: 2rem;
+            margin-bottom: 1rem;
+        }
+        @include desktop {
+            width: 27rem;
+        }
+    }
+    &__form--email::placeholder {
+        @include h4-mobile;
+        @include tablet {
+            @include h4-tablet;
+        }
+    }
+    &__buttons-container {
+        background-color: $bg-page;
+        width: 18rem;
+        height: 5.1vh;
+        margin-top: 1.5rem;
+        margin-left: -1rem;
+        @include tablet {
+            width: 44rem;
+            margin: 1.7rem 0 0 -23.77rem;   
+        }
+        @include desktop {
+            width: 50rem;
+        }
+    }
+    &__cancel-button {
+        width: 7.5rem;
+        height: 2.25rem;
+        border: 1px solid $divider;
+        border-radius: 1.25rem;
+        padding-left: 0.5rem;
+        font-family: "Titillium Web";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.8125rem;
+        line-height: 1.25rem;
+        color: $divider;
+        background-color: $white-global;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        &--active,
+        &:hover {
+        color: $interactive-elements;
+        border: 1px solid $interactive-elements;
+        }
+        @include tablet {
+            @include h3-tablet;
+            width: 4rem;
+            padding-left: 0;
+            margin-left: 33rem;
+        }
+    }
+    &__save-button {
+        width: 7.5rem;
+        height: 2.25rem;
+        border: 1px solid $divider;
+        border-radius: 1.25rem;
+        padding-left: 0.5rem;
+        font-family: "Titillium Web";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.8125rem;
+        line-height: 1.25rem;
+        color: $white-global;
+        background-color: $interactive-elements;
+        margin-left: 1rem;
+        &--active,
+        &:hover {
+        background-color: $bg-hover-header;
+        color: $white-global;
+        }
+        @include tablet {
+            @include h3-tablet;
+            width: 4rem;
+            padding-left: 0;
+        }
+    }
+}
+
+input {
+    &:active, &:focus, &:hover {
+        outline: none;
+        border: 1px solid $interactive-elements;
+        text-decoration: underline;
+        text-decoration-color: $interactive-elements;
+        text-decoration-thickness: 2px;
+    }
+    &:invalid {
+        border: 1px solid $out-stock-error;
+    }
+}

@@ -1,0 +1,139 @@
+@use "variables" as *;
+@use "colors" as *;
+@use "fonts" as *;
+@use "resets" as *;
+
+//media mixins
+
+@mixin tablet {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+//typograhpy mixins
+
+//H1 - Page Header
+@mixin h1-mobile {
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  color: $primary-text-color;
+}
+@mixin h1-tablet {
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+//H2 - Subheader
+@mixin h2-mobile {
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: $primary-text-color;
+}
+
+@mixin h2-tablet {
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+//H3 - Labels, Links & Buttons
+@mixin h3-mobile {
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  color: $primary-text-color;
+}
+@mixin h3-tablet {
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+// H4 - table header
+@mixin h4-mobile {
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.6875rem;
+  line-height: 1rem;
+  color: $primary-text-color;
+}
+
+@mixin h4-tablet {
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+//P1 - Body Large
+@mixin body-large-mobile {
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.625rem;
+  color: $primary-text-color;
+}
+@mixin body-large-tablet {
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+//P1 - Body medium
+@mixin body-medium-mobile {
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  color: $primary-text-color;
+}
+@mixin body-medium-tablet {
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+//P1 - Body small
+@mixin body-small-mobile {
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.6875rem;
+  line-height: 1rem;
+  color: $primary-text-color;
+}
+@mixin body-small-tablet {
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}

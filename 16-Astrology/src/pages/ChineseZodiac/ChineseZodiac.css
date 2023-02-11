@@ -1,0 +1,98 @@
+* {
+  position: fixed;
+  text-align: center;
+}
+
+.set {
+  font-size: 1em;
+  padding: 6px 20px;
+  border-radius: 15px;
+  background-color: rgba(23, 40, 80, 0.671);
+  border: 1px solid rgb(45, 76, 138);
+  margin: 10px;
+  }
+
+  .set:hover {
+    box-shadow: 0 8px 5px -5px rgb(74, 113, 192);
+    transform: translateY(-3px);
+    transition: 0.1s;
+  }
+  
+.birthYear {
+  width: 50vh;
+  padding: 10px;
+}
+
+  .form-content {
+    width: 50vh;
+    margin: auto;
+  }
+  
+  .wrapper {
+    width: 10vh;
+    margin: 2.6em auto;
+  }
+  
+  .zodiac-img {
+    background-size:contain;
+    background-repeat: no-repeat;
+    width: 10vh;
+    height: 10vh;
+    transform:scale(2);
+  }
+  
+  #Rat {
+    background-image: url("./images/Rat.png");
+  }
+  
+  #Ox {
+    background-image: url("./images/Ox.png");
+  }
+  
+  #Tiger {
+    background-image: url("./images/Tiger.png");
+  }
+  
+  #Rabbit {
+    background-image: url("./images/Rabbit.png");
+  }
+  
+  #Dragon {
+    background-image: url("./images/Dragon.png");
+  }
+  
+  #Snake {
+    background-image: url("./images/Snake.png");
+  }
+  
+  #Horse {
+    background-image: url("./images/Horse.png");
+  }
+  
+  #Goat {
+    background-image: url("./images/Goat.png");
+  }
+  
+  #Monkey {
+    background-image: url("./images/Monkey.png");
+  }
+  
+  #Rooster {
+    background-image: url("./images/Rooster.png");
+  }
+  
+  #Dog {
+    background-image: url("./images/Dog.png");
+  }
+  
+  #Pig {
+    background-image: url("./images/Pig.png");
+  }
+  
+#null{
+  background-image: url("./images/QuestionMark.png");
+}
+
+.transformImage{
+    transition-duration: 1s;
+  }

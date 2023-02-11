@@ -1,0 +1,14 @@
+* {
+    position: relative;
+}
+
+
+
+.carousel {
+    margin-top: 8%;
+}
+
+p {
+    margin: 0 100px 50px 100px;
+    padding-bottom: 80px;
+}

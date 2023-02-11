@@ -1,0 +1,96 @@
+@use "../../styles/global.scss" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+
+.deleteModal {
+  &-bg {
+    background-color: rgba(189, 197, 213, 0.75);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  &__top-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-container {
+    width: 31.25rem;
+    height: 31.25rem;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0.3125rem 0.9375rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5625rem;
+    justify-content: space-between;
+    @include tablet {
+      height: 16.375rem;
+      width: 42rem;
+    }
+  }
+  &__title {
+    display: inline-block;
+    text-align: center;
+    margin-top: 0.625rem;
+    text-align: start;
+    margin-bottom: 0.625rem;
+  }
+  &__close-btn {
+    display: flex;
+    justify-content: flex-end;
+    background-color: transparent;
+    border: none;
+    font-size: 0.9375rem;
+    cursor: pointer;
+  }
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__text {
+    @include body-large-mobile;
+    @include tablet {
+      @include body-large-tablet;
+    }
+  }
+  &__btn-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.3125rem;
+    @include tablet {
+      justify-content: flex-end;
+    }
+  }
+  &__btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem 2.8125rem;
+    border-radius: 1.25rem;
+    @include h3-mobile;
+    border: none;
+    @include tablet {
+      @include h3-tablet;
+    }
+    &:hover {
+      background-color: $primary-text-color;
+      color: $white-global;
+      cursor: pointer;
+    }
+    &-cancel {
+      background-color: $white-global;
+      border: 1px solid $divider;
+      color: $primary-text-color;
+    }
+    &-delete {
+      background-color: $out-stock-error;
+      color: $white-global;
+    }
+  }
+}

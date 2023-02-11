@@ -1,0 +1,89 @@
+.day {
+    font-size: 1em;
+    padding: 6px 20px;
+    border-radius: 15px;
+    background-color: rgba(23, 40, 80, 0.671);
+    border: 1px solid rgb(45, 76, 138);
+    margin: 10px;
+}
+
+.day:hover {
+    box-shadow: 0 8px 5px -5px rgb(74, 113, 192);
+    transform: translateY(-3px);
+    transition: 0.1s;
+}
+
+.day-buttons {
+    margin: 10px;
+}
+
+.daily-horoscope {
+    width: 50vh;
+    margin: auto;
+    padding: 10px;
+}
+
+.wrapper {
+    width: 10vh;
+    margin: 2.6em auto;
+}
+
+.horoscope-img {
+    background-size: cover;
+    background-position: center;
+    width: 10vh;
+    height: 10vh;
+    transform:scale(1.8);
+}
+
+#Capricorn {
+    background-image: url("./images/Capricorn.png");
+}
+
+#Aquarius {
+    background-image: url("./images/Aquarius.png");
+}
+
+#Pisces {
+    background-image: url("./images/Pisces.png");
+}
+
+#Aries {
+    background-image: url("./images/Aries.png");
+}
+
+#Taurus {
+    background-image: url("./images/Taurus.png");
+}
+
+#Gemini {
+    background-image: url("./images/Gemini.png");
+}
+
+#Cancer {
+    background-image: url("./images/Cancer.png");
+}
+
+#Leo {
+    background-image: url("./images/Leo.png");
+}
+
+#Virgo {
+    background-image: url("./images/Virgo.png");
+}
+
+#Libra {
+    background-image: url("./images/Libra.png");
+}
+
+#Scorpio {
+    background-image: url("./images/Scorpio.png");
+}
+
+#Sagittarius {
+    background-image: url("./images/Sagittarius.png");
+}
+
+.transformImage{
+    transition-duration: 1s;
+}

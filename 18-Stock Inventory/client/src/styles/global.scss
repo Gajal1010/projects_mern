@@ -1,0 +1,43 @@
+// css resets
+@use "./partials/fonts" as *;
+@use "./partials/variables" as *;
+@use "./partials/colors" as *;
+@use "./partials/mixins" as *;
+@use "./partials/resets" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Titillium Web", sans-serif;
+}
+
+h1 {
+  @include h1-mobile;
+  @include tablet {
+    @include h1-tablet;
+  }
+}
+h2 {
+  @include h2-mobile;
+  @include tablet {
+    @include h2-tablet;
+  }
+}
+h3 {
+  @include h3-mobile;
+  @include tablet {
+    @include h3-tablet;
+  }
+}
+h4 {
+  @include h4-mobile;
+  @include tablet {
+    @include h4-tablet;
+  }
+}

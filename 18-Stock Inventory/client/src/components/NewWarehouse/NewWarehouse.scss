@@ -1,0 +1,149 @@
+@use "../../styles/global.scss" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+
+/* --- New Warehouse --- */
+
+.new-warehouse {
+  width: 100%;
+  margin-bottom: 3rem;
+  margin: -5rem 1rem 3rem 1rem;
+  background-color: $white-global;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  border-radius: 0.25rem;
+  @include tablet {
+    margin: -6.6rem 2rem 0 2rem;
+  }
+  @include desktop {
+    max-width: $desktop-breakpoint;
+    margin: -6.6rem auto 3rem auto;
+  }
+  &__form-container {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+      width: 100%;
+    }
+  }
+  &__header {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $divider;
+  }
+  &__header-link {
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  &__details-header {
+    margin-bottom: 2rem;
+  }
+  &__form-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    padding: 0 2rem 0 2rem;
+    width: 100%;
+    &--warehouse {
+      @include tablet {
+        border-right: 1px solid $divider;
+      }
+    }
+    &--contact {
+      border-top: 1px solid $divider;
+      padding-top: 2rem;
+      margin: 0;
+      @include tablet {
+        border-top: none;
+      }
+    }
+  }
+  &__form-label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  &__form-input {
+    line-height: 2.25rem;
+    border-radius: 2rem;
+    padding: 0 1rem;
+    border: 1px solid $divider;
+    margin-top: 0.2rem;
+    font-family: "Titillium Web";
+    &::placeholder {
+      color: $table-colum-ph;
+    }
+    &:focus {
+      border: 1px solid $interactive-elements;
+      outline: none;
+    }
+    &--error {
+      border-color: $out-stock-error;
+    }
+  }
+  &__form-error {
+    color: $out-stock-error;
+    display: flex;
+    align-items: center;
+  }
+  &__form-error-icon {
+    height: 0.8rem;
+    margin-right: 0.2rem;
+  }
+  &__button-container {
+    display: flex;
+    margin-top: 2rem;
+    background-color: rgba(247, 248, 249, 0.7);
+    padding: 2rem 0 2rem 2rem;
+  }
+  &__button {
+    line-height: 2.25rem;
+    border-radius: 2rem;
+    padding: 0 0.5rem;
+    background-color: $interactive-elements;
+    border: none;
+    cursor: pointer;
+    font-family: "Titillium Web";
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin-right: 2rem;
+    font-size: 0.8rem;
+    color: $white-global;
+    @include tablet {
+      padding: 0 1rem;
+      font-size: 0.9rem;
+    }
+    &:hover {
+      background-color: $bg-hover-header;
+    }
+    &:disabled {
+      filter: grayscale(100%);
+    }
+    &--cancel {
+      border: 1px solid $divider;
+      background-color: $white-global;
+      color: $table-colum-ph;
+      &:hover {
+        border-color: $interactive-elements;
+        color: $interactive-elements;
+        background-color: $white-global;
+      }
+      @include tablet {
+        margin-left: auto;
+      }
+    }
+    @include tablet {
+      width: fit-content;
+    }
+  }
+}

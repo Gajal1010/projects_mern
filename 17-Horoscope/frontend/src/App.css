@@ -1,0 +1,528 @@
+body{
+  width: 100vw;
+  background-image: url('./marble.png');
+  background-size: cover;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-top: 25vh;
+  justify-content: center;
+  height: 100vh;
+}
+
+.links {
+  font-family: 'Raleway', sans-serif;
+  color: black;
+  padding: 0 10%;
+}
+
+.user {
+  position: absolute;
+  font-family: 'Ubuntu', sans-serif;
+  display: flex;
+  flex-direction: column;
+  right: 2%;
+  top: 3px;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: auto;
+}
+
+.user button >* {
+  box-shadow: none;
+  padding: none;
+  height: 30px;
+  margin: none;
+  text-decoration: none;
+  color: white;
+}
+
+.user button {
+  border: none;
+  background: rgba(105, 123, 224, 0.9);
+  border-radius: 15px;
+  color: white;
+  padding: 3px 7px;
+  margin: 0 10px;
+}
+
+.user p {
+  padding: 3px 0;
+  margin: 0;
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100vw;
+  background: white;
+  align-items: center;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 3px 5px 6px #ccc;
+  z-index: 15;
+}
+
+nav .links {
+  padding: 0 5%;
+}
+
+.noto{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.notothin{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 100;
+}
+
+.ubuntu{
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.ubuntulight{
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+}
+
+.homecontent{
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Open Sans', sans-serif;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.txtspan{
+  width:50%;
+  text-align: center;
+  font-size: 36px;
+  color: rgba(44, 55, 118, 0.9)
+}
+
+.submit{
+  background-color: white; /* Green */
+  border-radius: 5px ;
+  border: white;
+  align-self: center;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.submit:hover{
+  background: #b3b7bd;
+  cursor: pointer;
+
+}
+
+.focus:hover {
+  transform: scale(1.1);
+}
+
+
+td {
+  text-align: center;
+  width: 200px;
+  font-size: 16px;
+}
+
+tr{
+  border-bottom: 3px solid black;
+}
+
+#delete{
+  background-color:rgba(255, 0, 0, 0);
+  border: none;
+  font-size: 34px;
+  color: red;
+  cursor: pointer;
+  padding: 0px 5px;
+  margin-top: 5px;
+}
+
+.ani {
+  position: relative;
+  overflow: hidden;
+  transition: 1s all ease;
+  z-index: 5;
+}
+
+.ani > *{
+  transition: 0.6s all ease;
+}
+
+.ani Link:hover {
+  text-decoration: none;
+}
+
+.ani::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #697be0;
+  z-index: -60;
+  width: 100%;
+  height: 0%;
+  transition: all 0.6s ease;
+  overflow: hidden;
+}
+
+.ani:hover > * {
+  color: white !important;
+  z-index: 5;
+  text-decoration: none;
+}
+
+.ani:hover::before {
+  height: 100%;
+  overflow: hidden;
+  z-index: -50;
+}
+
+.middle {
+  display: inline-grid;
+  position: relative;
+  width: 10vw;
+  flex-direction: row;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.middle:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0px;
+  right: 35px;
+  background-color: black;
+  transform-origin: bottom center;
+  transition: transform 0.25s ease-out;
+}
+
+.middle:hover:after {
+  transform: scaleX(0.45);
+  transform-origin: bottom center;
+}
+/* Modal */
+.x{
+  float:right;
+  font-size: 18px;
+}
+.x:hover{
+  color: gray;
+  cursor: pointer;
+}
+.login {
+  position: absolute;
+  width: 40%;
+  height: auto;
+  background: rgba(105, 123, 224, 0.9);
+  border-radius: 14px;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5%;
+  z-index: 1001;
+}
+
+.login h1 {
+  margin: 0 auto 46px;
+  padding: 0 0 14px;
+  text-align: center;
+  font-size: 22px;
+  width: 60%;
+  border-bottom: 3px solid #FFF;
+}
+
+.log > *{
+  padding-top: 200px
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  padding-top: 5%;
+  align-items: center;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+#friendsForm input::placeholder {
+  color: rgb(82, 81, 81);
+}
+
+#friendsForm input[type="text"] {
+  color: black;
+  border-bottom: 1px black solid ;
+}
+    
+.form p {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.form  input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form input::placeholder{
+  color:white;
+}
+
+.avi {
+  border-radius: 100%;
+}
+ 
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"],
+.form input[type="message"]  {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 60px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.message{
+  margin-bottom: 2%;
+}
+
+/* tarot page */
+.tarotpage{
+  top:0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+.tarotbox{
+  display: flex;
+  width: 90%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.tarotcards{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 60vh;
+  width: auto;
+} 
+
+/* sun sign content */
+.signPageContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signDetails {
+  text-align: center;
+  line-height: 2;
+  font-size: 18px;
+  width: 90vw;
+  padding: 50px;
+  z-index: 5;
+}
+
+
+/* hamburger menu */
+.hamburger{
+  display: none;
+}
+.hamburgerMenu{
+  display:none;
+}
+@media (max-width: 500px){
+  .homecontent{
+    display: flex;
+    flex-direction: column;
+    font-size: 35px;
+    /* padding-top: 3%; */
+    height: auto;
+    width: 100vw;
+    font-family: 'Open Sans', sans-serif;
+    justify-content: center;
+    align-items: center;
+  }
+  .nightsky{
+    height: 20vh;
+    width: auto;
+  }
+  .txtspan{
+    text-align: center;
+    width:100%;
+  }
+      
+  .links{
+    display:none;
+  }
+  .tarotcards{
+    margin: 5% 0 ;
+  }
+  .tarotbox{
+    flex-direction: column;
+    padding: 5%;
+    margin-right: 25%;
+  }
+  footer {
+    padding: 5%;
+    margin-right: 25%;
+  }
+  .user>* {
+    margin-left: -90%!important;
+  }
+  
+  nav{
+    width: 100vw;
+  }
+
+  .hamburger{
+    display: block;
+    margin:2%;
+    padding-right: 3%;
+    z-index: 1000;
+  }
+    
+  .hamburgerMenu {
+    z-index: 99;
+    display: inline;
+    width: 100vw;
+    height: 150vh;
+    padding-top: 3%;
+    margin-top:0;
+    background-color:rgba(0,0,0,0.8);
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+    overflow: scroll;
+    z-index: 999;
+    transform: translate3d(100vh, 0, 0);
+  }
+
+  .hamburgerMenu li {
+    font-family: 'Open Sans', sans-serif;
+    list-style-type: none;
+    padding: 40px;
+    font-size: 35px;
+    color:  white;
+    text-align: center;
+    list-style-type: none;
+  }
+    
+  #clickedmenu {
+    transform: translate3d(0vw, 0, 0);
+    overflow: hidden;
+  }
+}
+
+.horo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(./marble.png);
+  background-size: cover;
+  height: 1400px;
+  width: 100vw;
+}
+
+.horo div {
+  border: 1px black solid;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.734);
+  z-index: 5;
+  width: 70%;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 0 0 ;
+  height: 1100px;
+}
+
+.horo div p {
+  width: 85%;
+  font-size: 20px;
+}
+
+.horo img {
+  width: 60vw;
+}
+
+footer{
+  position: relative;
+  color: white;
+  width: 100vw;
+  left: 0;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  margin-bottom: -100vh;
+  padding: 3% 0;
+  z-index: -90;
+  height: 120px;
+}
+
+h4 {
+  font-size: 26px;
+  padding: 2% 0 0 0;
+  margin: 0;
+}
+
+#footerFamily h2{
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+footer > * {
+  z-index: -5;
+}
+
+footer img {
+  width: 4vw;
+  padding-bottom: 10%;
+}
+
+/*Social media Icons*/
+
+.iconsPad{
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+}

@@ -1,0 +1,145 @@
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.calender-screen {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.rbc-calender {
+  height: 100%;
+}
+
+/******************************** Modal ********************************/
+.ReactModalPortal > div {
+  opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 999;
+}
+
+.modal-fondo {
+  background-color: rgba(0, 0, 0, 0.3);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.modal {
+  background: white;
+  border-radius: 5px;
+  color: rgb(51, 51, 51);
+  display: inline;
+  max-height: 620px;
+  max-width: 500px;
+  outline: none;
+  padding: 5px;
+}
+
+/******************************** Datepicker ********************************/
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__close-icon::before,
+.react-datepicker__close-icon::after {
+  background-color: #dc143c;
+}
+
+.react-datepicker__day--selected {
+  background-color: #367cf7;
+}
+
+.react-datepicker__time-container
+  .react-datepicker__time
+  .react-datepicker__time-box
+  ul.react-datepicker__time-list
+  li.react-datepicker__time-list-item--selected {
+  background-color: #367cf7;
+}
+
+/******************************** FABS ********************************/
+.fab {
+  border-radius: 100%;
+  bottom: 25px;
+  font-size: 30px;
+  padding: 25px;
+  position: fixed;
+  right: 25px;
+  z-index: 999;
+}
+
+.fab-danger {
+  bottom: 25px;
+  padding: 10px;
+  position: fixed;
+  left: 25px;
+  z-index: 999;
+}
+
+/******************************** Spinner ********************************/
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  width: 100%;
+}
+.center .lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.center .lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #272727;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #272727 transparent transparent transparent;
+}
+.center .lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.center .lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.center .lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
